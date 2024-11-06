@@ -1,0 +1,30 @@
+package org.example;
+
+import java.math.BigDecimal;
+import java.util.List;
+import java.util.UUID;
+
+public class Problem5 {
+
+    record Book (
+            UUID id,
+            String title,
+            String isbn,
+            String author,
+            BigDecimal price
+    ){}
+
+    record BookFilter(
+            List<UUID> ids,
+            List<String> titles,
+            List<String> isbns,
+            List<String> author,
+            BigDecimal priceLessThan,
+            BigDecimal priceGreaterThan
+    ){}
+
+    List<Book> books = List.of(
+            Book(UUID.randomUUID(), "Book")
+    )
+
+}
